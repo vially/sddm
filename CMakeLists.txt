@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.8)
+cmake_minimum_required(VERSION 2.8.12)
 
 project(SDDM)
 
@@ -31,6 +31,7 @@ add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 option(BUILD_MAN_PAGES "Build man pages" OFF)
 option(ENABLE_JOURNALD "Enable logging to journald" ON)
 option(ENABLE_PAM "Enable PAM support" ON)
+option(ENABLE_WAYLAND "Enable experimental Wayland greeter" OFF)
 
 # ECM
 find_package(ECM 1.4.0 REQUIRED NO_MODULE)
